@@ -1,6 +1,5 @@
 {
   "{apps,libs}/**/*.{ts,json,md,scss,html}": [
-    "yarn lint --fix=true",
-    "git add"
+    "yarn lint --fix=true"
   ]
 }
