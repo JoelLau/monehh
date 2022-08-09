@@ -4,7 +4,7 @@ import { ExpensesPageComponent } from './expenses-page.component';
 
 const routes: Routes = [
   {
-    path: '/',
+    path: '',
     component: ExpensesPageComponent,
   },
   {
