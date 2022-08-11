@@ -1,6 +1,11 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { ExpensesPageComponent } from './expenses-page.component';
+
+const CSS_SELECTORS = {
+  baseLayout: 'mn-base-layout',
+};
 
 describe('ExpensesPageComponent', () => {
   let component: ExpensesPageComponent;
@@ -19,5 +24,14 @@ describe('ExpensesPageComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should use the base layout', () => {
+    const { debugElement } = fixture;
+    const baseLayoutComponent = debugElement.query(
+      By.css(CSS_SELECTORS.baseLayout)
+    );
+
+    expect(baseLayoutComponent).toBeTruthy();
   });
 });
