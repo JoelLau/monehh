@@ -10,4 +10,4 @@ import { SHARED_IMPORTS as imports } from './constants/shared-imports';
   declarations,
   exports: [...imports, ...declarations],
 })
-export class SharedModule {}
+export class CommonModule {}

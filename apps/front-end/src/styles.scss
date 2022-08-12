@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 @import 'ng-zorro-antd/ng-zorro-antd.css';
+
+.ant-menu.ant-menu-dark {
+  background-color: unset;
+}
