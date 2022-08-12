@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NGZORRO_MODULES } from '../../constants/ng-zorro';
 import { BaseLayoutComponent } from './base-layout.component';
 
 describe('BaseLayoutComponent', () => {
@@ -8,6 +9,7 @@ describe('BaseLayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [...NGZORRO_MODULES],
       declarations: [BaseLayoutComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
