@@ -1,0 +1,52 @@
+<nz-layout class="h-screen">
+  <nz-sider
+    class="relative z-50 min-h-screen bg-slate-800"
+    nzCollapsible
+    nzWidth="256px"
+    nzBreakpoint="md"
+    [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null">
+    <div
+      class="relative h-16 overflow-hidden bg-slate-800 pl-6 leading-10 transition-all">
+      <a routerLink="/">
+        <img
+          src="https://ng.ant.design/assets/img/logo.svg"
+          alt="logo"
+          class="inline-block h-8 w-8 align-middle" />
+        <h1
+          class="mr-5 inline-block align-middle text-sm font-semibold text-white">
+          Monehh
+        </h1>
+      </a>
+    </div>
+    <ul
+      class="bg-slate-800"
+      nz-menu
+      nzTheme="dark"
+      nzMode="inline"
+      [nzInlineCollapsed]="isCollapsed">
+      <li nz-menu-item nzMatchRouter>
+        <a routerLink="/">Home</a>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header class="z-20 w-full p-0">
+      <div class="relative h-16 bg-white p-0">
+        <span
+          class="h-16 cursor-pointer py-6 px-5 text-lg"
+          (click)="isCollapsed = !isCollapsed">
+          <i
+            class="hover:text-blue-500"
+            nz-icon
+            [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+        </span>
+      </div>
+    </nz-header>
+    <nz-content class="m-6">
+      <div class="h-full bg-white p-6">
+        <ng-content></ng-content>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

@@ -5,7 +5,10 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx", "*.html"],
-      "extends": ["plugin:prettier/recommended"],
+      "extends": [
+        "plugin:prettier/recommended",
+        "plugin:tailwindcss/recommended"
+      ],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
