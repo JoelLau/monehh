@@ -1,25 +1,17 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NGZORRO_MODULES } from '../../constants/ng-zorro';
+import { render, screen } from '@testing-library/angular';
 import { BaseLayoutComponent } from './base-layout.component';
 
+const TEST_IDS = {
+  root: 'base-layout-root',
+};
+
 describe('BaseLayoutComponent', () => {
-  let component: BaseLayoutComponent;
-  let fixture: ComponentFixture<BaseLayoutComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [...NGZORRO_MODULES],
-      declarations: [BaseLayoutComponent],
+  test('should render', async () => {
+    await render(BaseLayoutComponent, {
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    }).compileComponents();
+    });
 
-    fixture = TestBed.createComponent(BaseLayoutComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(screen.queryByTestId(TEST_IDS.root)).toBeInTheDocument();
   });
 });
