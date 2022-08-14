@@ -1,20 +1,15 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { render, screen } from '@testing-library/angular';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [AppComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    }).compileComponents();
-  });
+const TEST_IDS = {
+  root: 'router-outlet',
+};
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+describe('AppComponent', () => {
+  test('should render router-outlet', async () => {
+    await render(AppComponent, { schemas: [CUSTOM_ELEMENTS_SCHEMA] });
+
+    expect(screen.queryByTestId(TEST_IDS.root)).toBeInTheDocument();
   });
 });

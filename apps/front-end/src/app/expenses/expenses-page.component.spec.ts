@@ -1,37 +1,20 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { render } from '@testing-library/angular';
+import { screen } from '@testing-library/dom';
 import { ExpensesPageComponent } from './expenses-page.component';
 
-const CSS_SELECTORS = {
-  baseLayout: 'mn-base-layout',
+const TEST_IDS = {
+  baseLayout: 'base-layout',
+  pageContents: 'page-contents',
 };
 
 describe('ExpensesPageComponent', () => {
-  let component: ExpensesPageComponent;
-  let fixture: ComponentFixture<ExpensesPageComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ExpensesPageComponent],
+  it('should render', async () => {
+    await render(ExpensesPageComponent, {
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    }).compileComponents();
+    });
 
-    fixture = TestBed.createComponent(ExpensesPageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should use the base layout', () => {
-    const { debugElement } = fixture;
-    const baseLayoutComponent = debugElement.query(
-      By.css(CSS_SELECTORS.baseLayout)
-    );
-
-    expect(baseLayoutComponent).toBeTruthy();
+    expect(screen.getByTestId(TEST_IDS.baseLayout)).toBeInTheDocument();
+    expect(screen.getByTestId(TEST_IDS.pageContents)).toBeInTheDocument();
   });
 });
