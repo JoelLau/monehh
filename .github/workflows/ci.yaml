@@ -7,7 +7,7 @@ on:
     branches: ['develop', 'main']
 
 jobs:
-  lint:
+  install-dependencies:
     runs-on: ubuntu-latest
 
     strategy:
@@ -26,11 +26,35 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Install Dependencies
+  build:
+    runs-on: ubuntu-latest
+    needs: [install-dependencies]
+
+    strategy:
+      matrix:
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+      - name: Build All Projects
+        run: yarn build
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: [install-dependencies]
+
+    strategy:
+      matrix:
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+      - name: Lint All Projects
         run: yarn lint
 
   unit-test:
     runs-on: ubuntu-latest
+    needs: [install-dependencies]
 
     strategy:
       matrix:
@@ -38,37 +62,5 @@ jobs:
         node-version: [14.x, 16.x, 18.x]
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
-
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Install Dependencies
+      - name: Test All Projects
         run: yarn test --ci
-
-  build:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-        node-version: [14.x, 16.x, 18.x]
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
-
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Install Dependencies
-        run: yarn build
