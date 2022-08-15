@@ -1,10 +1,10 @@
 <nz-layout class="min-h-screen" data-testid="base-layout-root">
-  <nz-layout>
-    <nz-header class="z-20 w-full p-0"></nz-header>
-    <nz-content class="m-6">
-      <div class="h-full bg-white p-6">
-        <ng-content></ng-content>
-      </div>
-    </nz-content>
-  </nz-layout>
+  <nz-header class="z-20 w-full bg-transparent p-0"></nz-header>
+  <h1 *ngIf="headerText" nz-typography class="mx-6">{{ headerText }}</h1>
+  <nz-content class="m-6">
+    <div class="h-full bg-white p-6">
+      <ng-content></ng-content>
+    </div>
+  </nz-content>
+  <nz-footer></nz-footer>
 </nz-layout>

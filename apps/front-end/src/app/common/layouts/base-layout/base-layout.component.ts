@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mn-base-layout',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./base-layout.component.scss'],
 })
 export class BaseLayoutComponent {
+  @Input() headerText?: string;
   isCollapsed = false;
 }

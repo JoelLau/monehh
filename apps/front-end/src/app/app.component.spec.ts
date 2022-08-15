@@ -10,6 +10,6 @@ describe('AppComponent', () => {
   test('should render router-outlet', async () => {
     await render(AppComponent, { schemas: [CUSTOM_ELEMENTS_SCHEMA] });
 
-    expect(screen.queryByTestId(TEST_IDS.root)).toBeInTheDocument();
+    expect(screen.getByTestId(TEST_IDS.root)).toBeInTheDocument();
   });
 });
