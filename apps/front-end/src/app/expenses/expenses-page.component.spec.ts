@@ -5,7 +5,8 @@ import { ExpensesPageComponent } from './expenses-page.component';
 
 const TEST_IDS = {
   baseLayout: 'base-layout',
-  pageContents: 'page-contents',
+  overview: 'overview',
+  expensesList: 'expenses-list',
 };
 
 describe('ExpensesPageComponent', () => {
@@ -15,6 +16,7 @@ describe('ExpensesPageComponent', () => {
     });
 
     expect(screen.getByTestId(TEST_IDS.baseLayout)).toBeInTheDocument();
-    expect(screen.getByTestId(TEST_IDS.pageContents)).toBeInTheDocument();
+    expect(screen.getByTestId(TEST_IDS.overview)).toBeInTheDocument();
+    expect(screen.getByTestId(TEST_IDS.expensesList)).toBeInTheDocument();
   });
 });
