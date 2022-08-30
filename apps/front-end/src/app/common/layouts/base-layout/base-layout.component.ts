@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./base-layout.component.scss'],
 })
 export class BaseLayoutComponent {
+  title?: string;
   isCollapsed = false;
 }
