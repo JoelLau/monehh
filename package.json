@@ -29,11 +29,11 @@
   },
   "devDependencies": {
     "@angular-architects/ddd": "2.1.2",
-    "@angular-devkit/build-angular": "14.2.4",
+    "@angular-devkit/build-angular": "14.2.5",
     "@angular-eslint/eslint-plugin": "14.1.2",
     "@angular-eslint/eslint-plugin-template": "14.1.2",
     "@angular-eslint/template-parser": "14.1.2",
-    "@angular/cli": "14.2.4",
+    "@angular/cli": "14.2.5",
     "@angular/compiler-cli": "14.2.5",
     "@angular/language-service": "14.2.5",
     "@nrwl/angular": "14.8.3",
