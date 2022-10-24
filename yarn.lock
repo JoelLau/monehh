@@ -15,10 +15,10 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@angular-architects/ddd@2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@angular-architects/ddd/-/ddd-2.1.2.tgz#c3f6d143e6a407119b4eeb948bcf10d61ffc586f"
-  integrity sha512-lauLASwE+UIeIIsCzHkiv2v3m5+HxOw6MCTTM1jP/QCJkwASAK4qJ9EhCRVCTO6KPJzcGbtMvN/0R7FLXdpdZQ==
+"@angular-architects/ddd@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@angular-architects/ddd/-/ddd-3.0.0.tgz#91efcabc4ac076609ee4d06cc6f6cbe237536ed1"
+  integrity sha512-aLfd0DUXbjDxSlV8R7sbtPotoYViu9nQJUwj7Vfk/erAu5QNTXFsGTEW5BKYb57JtrvEvCGYyyCidRUr1F8z6A==
   dependencies:
     "@ngrx/schematics" "^13.0.0"
 
