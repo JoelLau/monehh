@@ -44,7 +44,7 @@
     "@nrwl/linter": "15.0.13",
     "@nrwl/workspace": "15.0.13",
     "@testing-library/angular": "12.1.2",
-    "@testing-library/cypress": "8.0.3",
+    "@testing-library/cypress": "8.0.7",
     "@testing-library/dom": "8.19.0",
     "@testing-library/jest-dom": "5.16.5",
     "@types/jest": "29.2.3",
