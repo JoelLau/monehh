@@ -2368,10 +2368,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@testing-library/angular@12.1.2":
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/angular/-/angular-12.1.2.tgz#1666692a0346520a4958d61575976a9868bc5568"
-  integrity sha512-xRE5YzxL1yUXE4zzY2TowwmYCvmjEyaXn5bRhgPBC8NiP6ys+zT1b3ZvQTrP3SGpanNj9YM02rEikuu0SQVerw==
+"@testing-library/angular@12.2.0":
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/angular/-/angular-12.2.0.tgz#e7c6b3c96a3cf50e4c09f5fc3be3cf1522f13b97"
+  integrity sha512-k59NAV7StmLbL4VxZAnxbTXgZr8JVIPQ9kRZOUlBxxxWVcRVLbEzMdk+k6BD76wJdce7gwMKi+ubAPZ7g+hStQ==
   dependencies:
     "@testing-library/dom" "^8.0.0"
     tslib "^2.3.1"
