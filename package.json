@@ -66,7 +66,7 @@
     "jest-preset-angular": "12.2.3",
     "lint-staged": "13.1.0",
     "nx": "15.3.0",
-    "postcss": "8.4.19",
+    "postcss": "8.4.20",
     "prettier": "2.8.1",
     "prettier-plugin-tailwindcss": "0.2.1",
     "tailwindcss": "3.2.4",
