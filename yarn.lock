@@ -208,14 +208,14 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/cdk@^14.1.0":
-  version "14.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-14.2.0.tgz#27d0b307b1e9361fff21199001ac19f9b107767c"
-  integrity sha512-rAeQXUSbOJSKLVizueRKoZmRb0An5qJUMigsF8wJwJjySUIcJ8uSIOMV+G1rxkvxVVY0HRAVi2rIkJbeq3+WKQ==
+"@angular/cdk@^15.0.0":
+  version "15.0.3"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-15.0.3.tgz#9f995914d7d8fb0cb035cf2ba9c956b741fdbf79"
+  integrity sha512-iRLV6V6ksIshDL8Cdn1+DUNTRLqj+DAqmYTWYCEvH4qU6o0XSeXrAHNW5zNFqWgCZbmWt03G5jOBWBNaxa9QKw==
   dependencies:
     tslib "^2.3.0"
   optionalDependencies:
-    parse5 "^5.0.0"
+    parse5 "^7.1.2"
 
 "@angular/cli@14.2.10":
   version "14.2.10"
@@ -320,10 +320,10 @@
   dependencies:
     "@ctrl/tinycolor" "^3.3.1"
 
-"@ant-design/icons-angular@^14.1.0":
-  version "14.1.0"
-  resolved "https://registry.yarnpkg.com/@ant-design/icons-angular/-/icons-angular-14.1.0.tgz#7612507aae28872ce3ccd139857452426cc30be3"
-  integrity sha512-SvWi8p4L+cCfTGtezeUq1s8kahZEO1UVf7ZR615Fix3c2l9OnAJi+niDkq2fZHjpiarFrt8HoZ2EhMAMN7jfbg==
+"@ant-design/icons-angular@^15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@ant-design/icons-angular/-/icons-angular-15.0.0.tgz#fa6119e6c1f710f2c03ba11aff25bfd87b5a0243"
+  integrity sha512-9DMpuoqZBvS7+VJ0s3tl2g/kI1sTLDQWfykiXYa+AkZ2AvJwHebvR7Cw7/xfiXFDLyZTjPgtC0x0gex13EShuA==
   dependencies:
     "@ant-design/colors" "^5.0.0"
     tslib "^2.0.0"
@@ -9157,13 +9157,13 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-ng-zorro-antd@14.3.0:
-  version "14.3.0"
-  resolved "https://registry.yarnpkg.com/ng-zorro-antd/-/ng-zorro-antd-14.3.0.tgz#0cc5a406b62f4dcbcda2eea4d8d654c27c323dae"
-  integrity sha512-mGVok0DggrvVYTYWpbJJVekBs6j19kAkxB7PdZp0bvYRedpOVWKSEDX1Cigy7txnGw5UsSuzRSn3h6oZcBUmTA==
+ng-zorro-antd@15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/ng-zorro-antd/-/ng-zorro-antd-15.0.0.tgz#e315a267723d921de9f8d3f9dcae17c98aa2927a"
+  integrity sha512-txsYpgdI+yevd/zkv/VFRIovrxs+HpYKGjoLt6p6VKWYHyl172C+3Zn3Dwpb54f+JqfClPk9bb/RBG40QrsrWg==
   dependencies:
-    "@angular/cdk" "^14.1.0"
-    "@ant-design/icons-angular" "^14.1.0"
+    "@angular/cdk" "^15.0.0"
+    "@ant-design/icons-angular" "^15.0.0"
     date-fns "^2.16.1"
     tslib "^2.3.0"
 
@@ -9725,11 +9725,6 @@ parse5@6.0.1, parse5@^6.0.1:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
   integrity sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==
 
-parse5@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
-  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
-
 parse5@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-7.0.0.tgz#51f74a5257f5fcc536389e8c2d0b3802e1bfa91a"
@@ -9737,7 +9732,7 @@ parse5@^7.0.0:
   dependencies:
     entities "^4.3.0"
 
-parse5@^7.1.1:
+parse5@^7.1.1, parse5@^7.1.2:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-7.1.2.tgz#0736bebbfd77793823240a23b7fc5e010b7f8e32"
   integrity sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==
